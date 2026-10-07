@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="แหล่งเรียนรู้กฎหมายแพ่งและกฎหมายอาญา ระดับมัธยมศึกษา พร้อมแบบทดสอบ 40 ข้อ โดยคุณครูเกณิกา สาระดา โรงเรียนสนามชัยเขต">
+<link rel="icon" href="images/profile.jpg">
+<title>เรียนสังคมกับคุณครูเกณิกา</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font:'Outfit','Prompt',sans-serif;
+  --dark:#061033;
+  --dark-2:#0b1a4a;
+  --primary:#f2762e;
+  --primary-hover:#d9621d;
+  --optional:#4346d8;
+  --heading:#0d0f1a;
+  --para:#585c6b;
+  --bg:#ffffff;
+  --bg-gray:#f2f3f8;
+  --line:#e3e5ee;
+  --ok:#1a8a5a;
+  --bad:#d64045;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--para);line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--heading);font-weight:600;line-height:1.3}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:50;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:21px;white-space:nowrap}
+.logo-mark{width:36px;height:36px;border-radius:9px;background:var(--primary);display:grid;place-items:center}
+.logo span b{color:var(--primary);font-weight:700;margin-left:6px}
+.menu{display:flex;gap:2px}
+.menu button{color:rgba(255,255,255,.7);font-size:15px;font-weight:500;padding:8px 14px;transition:color .2s}
+.menu button:hover{color:#fff}
+.menu button.active{color:#fff;box-shadow:inset 0 -2px 0 var(--primary)}
+.nav-cta{background:var(--primary);color:#fff;font-weight:600;font-size:15px;padding:9px 20px;border-radius:8px;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:var(--primary-hover)}
+.burger{display:none;color:#fff;width:42px;height:42px;border-radius:8px;background:rgba(255,255,255,.1)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;padding:13px 26px;border-radius:10px;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-hover)}
+.btn-ghost{color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:#fff;color:var(--dark)}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{background:var(--optional)}
+.btn-outline{border:1px solid var(--line);color:var(--heading);background:#fff}
+.btn-outline:hover{border-color:var(--heading)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;padding:100px 0 140px;
+  background:
+    radial-gradient(55% 45% at 85% 35%,rgba(30,140,255,.35) 0%,transparent 70%),
+    radial-gradient(50% 45% at 5% 80%,rgba(40,90,255,.35) 0%,transparent 70%),
+    var(--dark);}
+.hero::before{content:"";position:absolute;width:70%;height:90%;right:-15%;top:-20%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(40,150,255,.35),transparent);filter:blur(30px);animation:drift 14s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;width:55%;height:70%;left:-15%;bottom:-25%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(67,70,216,.4),transparent);filter:blur(30px);animation:drift 18s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(-8%,12%) scale(1.1)}}
+.hero .container{position:relative;z-index:2}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;padding:6px 14px 6px 6px;border-radius:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);margin-bottom:24px;color:rgba(255,255,255,.85)}
+.pill i{font-style:normal;background:var(--primary);color:#fff;padding:1px 10px;border-radius:20px;font-weight:600;font-size:13px}
+.hero h1{color:#fff;font-size:clamp(34px,5vw,56px);font-weight:600;line-height:1.22;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--primary)}
+.hero p.lead{font-size:18px;color:rgba(255,255,255,.75);max-width:560px;margin-bottom:34px;font-weight:300}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:26px}
+.hero-card h4{color:#fff;font-size:17px;font-weight:600;margin-bottom:16px}
+.scale{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.scale div{border-radius:12px;padding:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+.scale b{display:block;color:#fff;font-size:16px;margin-bottom:4px;font-weight:600}
+.scale span{font-size:13.5px;color:rgba(255,255,255,.68);line-height:1.6;display:block}
+.scale .tag{display:inline-block;font-size:12px;padding:1px 9px;border-radius:6px;margin-bottom:10px;font-weight:600;color:#fff}
+.tag-civil{background:#2c2fa8}
+.tag-crim{background:#a83a3a}
+.hero-card .mini{margin-top:12px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.8);font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;transition:border-color .2s}
+.hero-card .mini:hover{border-color:var(--primary)}
+.hero-card .mini b{color:var(--primary);font-size:15px}
+
+/* ---------- Facts ---------- */
+.facts{margin-top:-70px;position:relative;z-index:5}
+.facts-box{background:#fff;border-radius:20px;border:1px solid var(--line);box-shadow:0 10px 30px -15px rgba(6,16,51,.2);display:grid;grid-template-columns:repeat(3,1fr);padding:30px 20px}
+.fact{text-align:center;padding:4px 10px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact .num{font-size:42px;font-weight:600;line-height:1;color:var(--heading)}
+.fact p{font-size:15px;margin-top:8px}
+
+/* ---------- Sections ---------- */
+section.block{padding:96px 0}
+.bg-gray{background:var(--bg-gray)}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 52px}
+.sub-title{display:inline-block;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:10px}
+.sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:12px}
+.sec-head p{font-size:17px}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.feature{background:#fff;border-radius:var(--r);padding:34px 30px;border:1px solid var(--line);transition:transform .3s,box-shadow .3s,border-color .3s}
+.feature:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 18px 40px -18px rgba(6,16,51,.28)}
+.feature .ico{transition:transform .3s}
+.feature:hover .ico{transform:rotate(-6deg) scale(1.06)}
+.feature .ico{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;margin-bottom:22px}
+.ico.o{background:#fff1e8;color:var(--primary)} .ico.p{background:#ececfd;color:var(--optional)} .ico.d{background:#e8eef9;color:var(--dark-2)}
+.feature h3{font-size:21px;margin-bottom:8px}
+.feature p{font-size:15.5px;margin-bottom:18px}
+.link-more{font-weight:600;color:var(--heading);font-size:15px;border-bottom:1px solid currentColor;padding-bottom:1px}
+.link-more:hover{color:var(--primary)}
+
+.subjects{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.subject{border-radius:20px;padding:40px 36px;background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+.subject:hover{transform:translateY(-6px);box-shadow:0 22px 50px -22px rgba(6,16,51,.35)}
+.subject.active{background:var(--dark);color:rgba(255,255,255,.72);border-color:var(--dark)}
+.subject.active h3{color:#fff}
+.subject .badge{display:inline-block;font-size:13px;font-weight:600;padding:3px 12px;border-radius:6px;background:#ececfd;color:var(--optional);margin-bottom:16px}
+.subject.active .badge{background:rgba(242,118,46,.15);color:#ffa66f}
+.subject h3{font-size:28px;margin-bottom:4px}
+.subject .big{font-size:15px;margin-bottom:22px}
+.subject ul{list-style:none;margin-bottom:28px}
+.subject li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.subject.active li{border-color:rgba(255,255,255,.1)}
+.subject li::before{content:"✓";flex:0 0 auto;font-weight:700;color:var(--optional)}
+.subject.active li::before{color:var(--primary)}
+
+.compare{background:#fff;border-radius:16px;border:1px solid var(--line);overflow:hidden}
+.compare table{width:100%;border-collapse:collapse;font-size:15.5px}
+.compare th,.compare td{padding:16px 22px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.compare thead th{background:var(--dark);color:#fff;font-weight:600}
+.compare thead th:nth-child(2){color:#b4b6ff}
+.compare thead th:nth-child(3){color:#ffb48a}
+.compare td:first-child{font-weight:600;color:var(--heading);width:22%;background:#fafbfd}
+.compare tr:last-child td{border-bottom:0}
+
+.cta{border-radius:20px;padding:52px 56px;background:var(--dark);display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{color:#fff;font-size:clamp(24px,3vw,34px);margin-bottom:6px}
+.cta p{color:rgba(255,255,255,.7)}
+
+/* ---------- Inner page banner ---------- */
+.page-banner{color:#fff;text-align:center;padding:72px 0 80px;
+  background:radial-gradient(50% 70% at 85% 20%,rgba(30,140,255,.3),transparent 70%),var(--dark)}
+.page-banner h1{color:#fff;font-size:clamp(32px,4.4vw,48px);margin-bottom:10px}
+.page-banner p{color:rgba(255,255,255,.72);max-width:640px;margin:0 auto;font-weight:300;font-size:17px}
+.crumb{display:inline-flex;gap:8px;font-size:14px;margin-bottom:14px;color:rgba(255,255,255,.6)}
+.crumb b{color:var(--primary);font-weight:500}
+
+/* ---------- Lessons ---------- */
+.lesson{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:start}
+.toc{position:sticky;top:94px;background:#fff;border-radius:16px;border:1px solid var(--line);padding:22px}
+.toc h4{font-size:16px;margin-bottom:10px}
+.toc a{display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:8px;font-size:15px}
+.toc a span{flex:0 0 24px;height:24px;border-radius:6px;background:var(--bg-gray);color:var(--heading);font-weight:600;font-size:13px;display:grid;place-items:center}
+.toc a:hover{background:var(--bg-gray);color:var(--heading)}
+.toc .btn{width:100%;justify-content:center;margin-top:14px;padding:11px}
+.topic{background:#fff;border-radius:16px;border:1px solid var(--line);padding:36px 38px;margin-bottom:24px;scroll-margin-top:94px}
+.topic-head{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+.topic-head .n{flex:0 0 48px;height:48px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:600;font-size:18px}
+.civil .topic-head .n{background:var(--optional)}
+.crim .topic-head .n{background:var(--primary)}
+.topic-head h2{font-size:23px}
+.topic-head small{display:block;font-size:14px;color:var(--para);font-weight:400}
+.topic p{margin-bottom:14px}
+.topic h3{font-size:18px;margin:22px 0 10px}
+.topic ul{list-style:none;margin-bottom:14px}
+.topic ul li{position:relative;padding-left:20px;margin-bottom:6px}
+.topic ul li::before{content:"";position:absolute;left:3px;top:11px;width:7px;height:7px;border-radius:50%;background:var(--primary)}
+.civil .topic ul li::before{background:var(--optional)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.box{border-radius:12px;padding:16px 18px;background:var(--bg-gray);font-size:15px}
+.box b{display:block;color:var(--heading);margin-bottom:4px;font-size:16px;font-weight:600}
+.box.warm{background:#fff4ec}
+.box.rose{background:#fdf0f0}
+.note{border-left:3px solid var(--primary);background:#fff8f3;border-radius:0 10px 10px 0;padding:13px 18px;font-size:15px;margin:16px 0}
+.civil .note{border-color:var(--optional);background:#f5f5fe}
+.note b{color:var(--heading)}
+.law{display:inline-block;font-size:12.5px;font-weight:600;padding:0 8px;border-radius:6px;background:#ececfd;color:var(--optional);margin-left:4px;vertical-align:2px;white-space:nowrap}
+.crim .law{background:#fff1e8;color:#c0561a}
+.steps{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.steps div{flex:1 1 120px;text-align:center;border-radius:12px;padding:14px 10px;background:var(--bg-gray);font-size:14.5px}
+.steps div b{display:block;font-size:20px;color:var(--heading)}
+.steps div.hot{background:var(--dark);color:#fff}
+.steps div.hot b{color:var(--primary)}
+.mini-table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}
+.mini-table th,.mini-table td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.mini-table th{background:var(--bg-gray);color:var(--heading);font-weight:600}
+.example{background:var(--dark);color:rgba(255,255,255,.8);border-radius:12px;padding:18px 22px;margin:16px 0;font-size:15px}
+.example b{color:#ffa66f}
+
+/* ---------- Quiz ---------- */
+.quiz-sec{padding-top:0}
+.quiz-wrap{max-width:860px;margin:0 auto}
+.stepper{position:sticky;top:70px;z-index:10;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:16px 0;background:var(--bg-gray);margin-bottom:20px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;text-align:left;transition:border-color .2s,box-shadow .2s}
+.step small{display:block;font-size:12.5px;color:var(--para)}
+.step b{display:block;color:var(--heading);font-weight:600;font-size:15px}
+.step i{display:block;height:4px;border-radius:4px;background:var(--bg-gray);margin-top:8px;overflow:hidden}
+.step i span{display:block;height:100%;background:var(--primary);transition:width .4s}
+.step:hover{border-color:#c4c7d6}
+.step.on{border-color:var(--dark);box-shadow:inset 0 0 0 1px var(--dark)}
+.step .sc{float:right;font-size:13px;font-weight:600;color:var(--ok)}
+.part-head{margin-bottom:18px}
+.part-head small{color:var(--primary);font-weight:600;font-size:14px}
+.part-head h2{font-size:26px}
+.qitem{background:#fff;border-radius:16px;border:1px solid var(--line);padding:26px 28px;margin-bottom:16px;scroll-margin-top:170px;opacity:0;animation:rise .5s ease forwards}
+.qitem .qno{display:flex;justify-content:space-between;gap:10px;font-size:14px;margin-bottom:6px}
+.qitem .qno b{color:var(--heading)}
+.qtext{font-size:18px;color:var(--heading);font-weight:500;margin-bottom:16px;line-height:1.6}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;font-size:15.5px;color:var(--heading);transition:border-color .15s,background .15s,transform .15s}
+.opt:hover:not(:disabled){border-color:var(--heading)}
+.opt:active:not(:disabled){transform:scale(.98)}
+.opt .k{flex:0 0 30px;height:30px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:600;font-size:14px;transition:all .15s}
+.opt.pick{border-color:var(--dark);background:#f6f7fb}
+.opt.pick .k{background:var(--dark);border-color:var(--dark);color:#fff}
+.opt.right{border-color:var(--ok);background:#eef8f3}
+.opt.right .k{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:#fdf1f1}
+.opt.wrong .k{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt:disabled{cursor:default}
+.tagq{font-size:12.5px;font-weight:600;padding:1px 10px;border-radius:6px}
+.tagq.ok{background:#e3f4ec;color:var(--ok)}
+.tagq.no{background:#fde8e8;color:var(--bad)}
+.tagq.skip{background:var(--bg-gray);color:var(--para)}
+.explain{margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--bg-gray);font-size:15px}
+.explain b{color:var(--heading)}
+.quiz-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:26px;flex-wrap:wrap}
+.answered{font-size:15px}
+.answered b{color:var(--heading)}
+.warn{margin-top:14px;padding:12px 16px;border-radius:10px;background:#fff4ec;color:#a4480f;font-size:15px;text-align:right}
+.result-box{background:var(--dark);color:rgba(255,255,255,.75);border-radius:20px;padding:34px 36px;margin-bottom:28px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;animation:rise .6s ease;
+  background-image:radial-gradient(50% 80% at 100% 0%,rgba(30,140,255,.3),transparent 70%)}
+.result-box[hidden]{display:none}
+.result-box .big{font-size:68px;font-weight:600;color:#fff;line-height:1}
+.result-box .big small{font-size:24px;color:rgba(255,255,255,.6);font-weight:400}
+.result-box h3{color:#fff;font-size:22px;margin-bottom:4px}
+.parts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 18px}
+.parts div{border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 12px;font-size:13px}
+.parts b{display:block;color:#fff;font-size:18px}
+.result-box .btn-ghost{padding:10px 20px;font-size:15px}
+/* ---------- Gallery marquee ---------- */
+.gallery-sec{overflow:hidden}
+.marquee{display:grid;gap:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:14px;width:max-content;animation:scrollx 120s linear infinite}
+.track.rev{animation-direction:reverse;animation-duration:140s}
+.marquee:hover .track{animation-play-state:paused}
+.track img{height:220px;width:auto;border-radius:14px;display:block;transition:transform .3s;cursor:zoom-in}
+.track img:hover{transform:scale(1.04)}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,16,51,.88);display:grid;place-items:center;padding:24px;cursor:zoom-out;animation:pagein .25s ease}
+.lightbox img{max-width:100%;max-height:100%;border-radius:12px}
+@media (max-width:700px){.track img{height:150px}.marquee{gap:10px}.track{gap:10px}}
+@media (prefers-reduced-motion:reduce){.marquee{overflow-x:auto}}
+
+/* ---------- About ---------- */
+.profile{display:grid;grid-template-columns:360px 1fr;gap:56px;align-items:center}
+.photo{border-radius:20px;aspect-ratio:4/5;position:relative;overflow:hidden;background:var(--dark);display:flex;align-items:flex-end}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo .initial{position:absolute;inset:0;display:grid;place-items:center;font-size:110px;font-weight:600;color:rgba(255,255,255,.12)}
+.photo .cap{position:relative;z-index:2;margin:18px;padding:14px 18px;border-radius:12px;background:#fff;width:100%}
+.photo .cap b{display:block;font-size:17px;color:var(--heading);font-weight:600}
+.photo .cap span{font-size:13.5px}
+.profile h2{font-size:clamp(30px,4vw,42px);margin-bottom:6px}
+.role{font-size:17px;margin-bottom:28px;display:block}
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl{position:relative;background:#fff;border-radius:12px;border:1px solid var(--line);padding:16px 20px;margin-bottom:14px}
+.tl::before{content:"";position:absolute;left:-28px;top:21px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--primary)}
+.tl small{font-size:13px;font-weight:600;color:var(--primary)}
+.tl b{display:block;color:var(--heading);font-size:17px;font-weight:600}
+.tl span{font-size:15px}
+
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:46px 0 28px;font-size:15px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:20px}
+.foot .logo{font-size:19px}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-links button{color:rgba(255,255,255,.65);font-size:15px}
+.foot-links button:hover{color:#fff}
+.copy{text-align:center;font-size:14px}
+
+.page{display:none}
+.page.show{display:block;animation:pagein .45s ease}
+@keyframes pagein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.hero .anim{opacity:0;animation:rise .8s ease forwards}
+.hero .a2{animation-delay:.12s}.hero .a3{animation-delay:.24s}.hero .a4{animation-delay:.36s}.hero .a5{animation-delay:.5s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.hero .anim,.qitem{opacity:1!important;transform:none!important}
+}
+
+@media (max-width:991px){
+  .menu{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--dark);padding:10px 16px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .menu.open{display:flex}
+  .menu button{text-align:left}
+  .menu button.active{box-shadow:inset 3px 0 0 var(--primary)}
+  .burger{display:grid;place-items:center}
+  .nav-cta{display:none}
+  .hero-grid,.profile,.lesson{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr 1fr}
+  .toc{position:static}
+  .profile .photo{max-width:360px}
+}
+@media (max-width:700px){
+  .container{padding:0 16px}
+  section.block{padding:66px 0}
+  .hero{padding:64px 0 120px}
+  .facts-box{grid-template-columns:1fr;row-gap:20px}
+  .fact{border-right:0;border-bottom:1px solid var(--line);padding-bottom:18px}
+  .fact:last-child{border-bottom:0;padding-bottom:0}
+  .features,.subjects,.grid2,.grid3,.scale{grid-template-columns:1fr}
+  .topic{padding:24px 20px}
+  .qitem{padding:20px 18px}
+  .opts,.parts{grid-template-columns:1fr}
+  .parts{grid-template-columns:1fr 1fr}
+  .stepper{gap:6px;padding:10px 0}
+  .step{padding:8px}
+  .step small,.step .sc{display:none}
+  .step b{font-size:13px}
+  .result-box{grid-template-columns:1fr;gap:16px;padding:26px 22px}
+  .quiz-foot .answered{order:-1;width:100%;text-align:center}
+  .cta{padding:34px 24px}
+  .subject{padding:30px 24px}
+  .compare{overflow-x:auto}
+  .compare table{min-width:560px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <button class="logo" data-go="home" aria-label="หน้าแรก">
+      <span>เรียนสังคมกับ<b>คุณครูเกณิกา</b></span>
+    </button>
+    <nav class="menu" id="menu">
+      <button data-go="home" class="active">หน้าแรก</button>
+      <button data-go="civil">กฎหมายแพ่ง</button>
+      <button data-go="criminal">กฎหมายอาญา</button>
+      <button data-go="quiz">แบบทดสอบ</button>
+      <button data-go="about">เกี่ยวกับผู้สอน</button>
+    </nav>
+    <button class="nav-cta" data-go="quiz">ทำแบบทดสอบ</button>
+    <button class="burger" id="burger" aria-label="เมนู"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<div class="page show" id="page-home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="anim a2">เข้าใจ<em>กฎหมายแพ่ง</em><br>และ<em>กฎหมายอาญา</em><br>ที่เกี่ยวกับชีวิตจริง</h1>
+        <p class="lead anim a3">อายุเท่าไรถึงทำสัญญาเองได้ กู้เงินเพื่อนต้องมีหลักฐานไหม กระชากกระเป๋ากับชิงทรัพย์ต่างกันอย่างไร อ่านสรุปพร้อมเลขมาตรา แล้วลองทำแบบทดสอบ</p>
+        <div class="hero-actions anim a4">
+          <button class="btn btn-primary" data-go="civil">เริ่มเรียน</button>
+          <button class="btn btn-ghost" data-go="quiz">ทำแบบทดสอบ</button>
+        </div>
+      </div>
+      <div class="hero-card anim a5">
+        <h4>แพ่งกับอาญา ต่างกันอย่างไร</h4>
+        <div class="scale">
+          <div><span class="tag tag-civil">กฎหมายแพ่ง</span><b>เรื่องระหว่างบุคคล</b><span>สัญญา ครอบครัว มรดก ผลคือต้องชดใช้ค่าเสียหาย</span></div>
+          <div><span class="tag tag-crim">กฎหมายอาญา</span><b>ความผิดต่อสังคม</b><span>รัฐเป็นผู้ดำเนินคดี ผลคือผู้กระทำต้องรับโทษ</span></div>
+        </div>
+        <button class="mini" data-go="quiz"><span>แบบทดสอบพร้อมเฉลย</span><b>40 ข้อ →</b></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="container facts">
+    <div class="facts-box reveal">
+      <div class="fact"><div class="num" data-count="2">0</div><p>หมวดกฎหมาย แพ่งและอาญา</p></div>
+      <div class="fact"><div class="num" data-count="12">0</div><p>หัวข้อบทเรียน</p></div>
+      <div class="fact"><div class="num" data-count="40">0</div><p>ข้อสอบพร้อมเฉลย</p></div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sub-title">เรียนอะไรบ้าง</span>
+        <h2>บทเรียน และแบบทดสอบ</h2>
+        <p>เนื้อหาตามหลักสูตรสังคมศึกษา ระดับมัธยมศึกษา มีตัวอย่างสถานการณ์ใกล้ตัวนักเรียน</p>
+      </div>
+      <div class="features">
+        <div class="feature reveal">
+          <div class="ico p"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
+          <h3>กฎหมายแพ่ง</h3>
+          <p>บุคคลและความสามารถ นิติกรรม สัญญาในชีวิตประจำวัน ครอบครัว มรดก และละเมิด</p>
+          <button class="link-more" data-go="civil">อ่านบทเรียน</button>
+        </div>
+        <div class="feature reveal d1">
+          <div class="ico o"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>กฎหมายอาญา</h3>
+          <p>หลักความรับผิด โทษ 5 สถาน เด็กกับความรับผิดทางอาญา และความผิดเกี่ยวกับทรัพย์</p>
+          <button class="link-more" data-go="criminal">อ่านบทเรียน</button>
+        </div>
+        <div class="feature reveal d2">
+          <div class="ico d"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>แบบทดสอบ</h3>
+          <p>ข้อสอบปรนัย 40 ข้อ แบ่ง 4 ตอน กดส่งแล้วเฉลยพร้อมเหตุผลทุกข้อ</p>
+          <button class="link-more" data-go="quiz">เริ่มทำข้อสอบ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block bg-gray">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sub-title">เลือกบทเรียน</span>
+        <h2>สองหมวดหลักของกฎหมาย</h2>
+      </div>
+      <div class="subjects">
+        <div class="subject reveal">
+          <span class="badge">ประมวลกฎหมายแพ่งและพาณิชย์</span>
+          <h3>กฎหมายแพ่ง</h3>
+          <p class="big">ว่าด้วยสิทธิและหน้าที่ระหว่างบุคคล</p>
+          <ul>
+            <li>บุคคล ผู้เยาว์ และการบรรลุนิติภาวะ</li>
+            <li>นิติกรรม โมฆะ และโมฆียะ</li>
+            <li>สัญญาซื้อขาย เช่า เช่าซื้อ กู้ยืม</li>
+            <li>ครอบครัว การสมรส และมรดก</li>
+            <li>ละเมิดและค่าสินไหมทดแทน</li>
+          </ul>
+          <button class="btn btn-dark" data-go="civil">เข้าสู่บทเรียน</button>
+        </div>
+        <div class="subject active reveal d1">
+          <span class="badge">ประมวลกฎหมายอาญา</span>
+          <h3>กฎหมายอาญา</h3>
+          <p class="big">ว่าด้วยความผิดและโทษ</p>
+          <ul>
+            <li>ลักษณะสำคัญของกฎหมายอาญา</li>
+            <li>เจตนา ประมาท และขั้นตอนการกระทำผิด</li>
+            <li>โทษทางอาญา 5 สถาน</li>
+            <li>เด็กและเยาวชนกับความรับผิดทางอาญา</li>
+            <li>ความผิดเกี่ยวกับทรัพย์ที่พบบ่อย</li>
+          </ul>
+          <button class="btn btn-primary" data-go="criminal">เข้าสู่บทเรียน</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sub-title">เปรียบเทียบ</span>
+        <h2>แพ่งกับอาญา ต่างกันตรงไหน</h2>
+        <p>เหตุการณ์เดียวกันอาจเป็นทั้งคดีแพ่งและคดีอาญา เช่น ขับรถประมาทชนคนบาดเจ็บ</p>
+      </div>
+      <div class="compare reveal">
+        <table>
+          <thead><tr><th>ประเด็น</th><th>กฎหมายแพ่ง</th><th>กฎหมายอาญา</th></tr></thead>
+          <tbody>
+            <tr><td>วัตถุประสงค์</td><td>คุ้มครองสิทธิและผลประโยชน์ของเอกชน</td><td>รักษาความสงบเรียบร้อยของสังคม</td></tr>
+            <tr><td>คู่กรณี</td><td>เอกชนกับเอกชน</td><td>รัฐ (พนักงานอัยการ) หรือผู้เสียหาย กับผู้กระทำผิด</td></tr>
+            <tr><td>ผลทางกฎหมาย</td><td>ชดใช้ค่าเสียหาย คืนทรัพย์ ปฏิบัติตามสัญญา</td><td>ประหารชีวิต จำคุก กักขัง ปรับ ริบทรัพย์สิน</td></tr>
+            <tr><td>การตีความ</td><td>เทียบเคียงบทกฎหมายใกล้เคียงได้</td><td>ตีความเคร่งครัด ไม่มีกฎหมายบัญญัติ ไม่เป็นความผิด</td></tr>
+            <tr><td>ตัวอย่าง</td><td>ผิดสัญญากู้เงิน ทำของผู้อื่นเสียหาย</td><td>ลักทรัพย์ ฉ้อโกง ทำร้ายร่างกาย</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="container">
+      <div class="cta reveal">
+        <div><h2>อ่านจบแล้ว ลองทำแบบทดสอบ</h2><p>40 ข้อ แบ่ง 4 ตอน ใช้เวลาประมาณ 20 นาที</p></div>
+        <button class="btn btn-primary" data-go="quiz">เริ่มทำแบบทดสอบ</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CIVIL ================= -->
+<div class="page civil" id="page-civil">
+  <section class="page-banner">
+    <div class="container">
+      <div class="crumb">หน้าแรก / <b>กฎหมายแพ่ง</b></div>
+      <h1>กฎหมายแพ่ง</h1>
+      <p>กำหนดสิทธิและหน้าที่ระหว่างบุคคล ตั้งแต่เกิดจนตาย ตามประมวลกฎหมายแพ่งและพาณิชย์ (ป.พ.พ.)</p>
+    </div>
+  </section>
+  <section class="block bg-gray">
+    <div class="container lesson">
+      <aside class="toc">
+        <h4>หัวข้อบทเรียน</h4>
+        <a href="#c1"><span>1</span>บุคคล</a>
+        <a href="#c2"><span>2</span>ความสามารถของบุคคล</a>
+        <a href="#c3"><span>3</span>นิติกรรม</a>
+        <a href="#c4"><span>4</span>สัญญาในชีวิตประจำวัน</a>
+        <a href="#c5"><span>5</span>ครอบครัวและมรดก</a>
+        <a href="#c6"><span>6</span>ละเมิด</a>
+        <button class="btn btn-primary" data-go="quiz" data-part="0">ทำข้อสอบกฎหมายแพ่ง</button>
+      </aside>
+      <div>
+        <article class="topic reveal" id="c1">
+          <div class="topic-head"><div class="n">1</div><h2>บุคคล<small>ผู้มีสิทธิและหน้าที่ตามกฎหมาย</small></h2></div>
+          <div class="grid2">
+            <div class="box"><b>บุคคลธรรมดา</b>มนุษย์ทุกคน สภาพบุคคลเริ่มเมื่อคลอดแล้วอยู่รอดเป็นทารก และสิ้นสุดเมื่อตาย <span class="law">ม.15</span></div>
+            <div class="box"><b>นิติบุคคล</b>บุคคลที่กฎหมายสมมติขึ้น เช่น บริษัทจำกัด ห้างหุ้นส่วนจดทะเบียน มูลนิธิ สมาคม กระทรวง</div>
+          </div>
+          <p>บุคคลธรรมดามีสิ่งเฉพาะตัว ได้แก่ <b>ชื่อ สัญชาติ ภูมิลำเนา และสถานะ</b> (เช่น โสด สมรส)</p>
+          <div class="note"><b>คนสาบสูญ:</b> ถ้าบุคคลหายไปจากภูมิลำเนาโดยไม่มีใครรู้ว่ายังมีชีวิตอยู่หรือไม่ เป็นเวลา 5 ปี (หรือ 2 ปีในกรณีพิเศษ เช่น สงคราม เรืออับปาง) ผู้มีส่วนได้เสียหรืออัยการร้องขอให้ศาลสั่งเป็นคนสาบสูญได้ และถือว่าถึงแก่ความตาย</div>
+        </article>
+
+        <article class="topic reveal" id="c2">
+          <div class="topic-head"><div class="n">2</div><h2>ความสามารถของบุคคล<small>ใครทำนิติกรรมได้เองบ้าง</small></h2></div>
+          <h3>ผู้เยาว์</h3>
+          <p>คือผู้ที่ยังไม่บรรลุนิติภาวะ ซึ่งจะบรรลุนิติภาวะเมื่อ</p>
+          <ul>
+            <li>อายุครบ <b>20 ปีบริบูรณ์</b> <span class="law">ม.19</span></li>
+            <li>หรือ <b>สมรสตามกฎหมาย</b> ซึ่งปัจจุบันทั้งสองฝ่ายต้องอายุ 18 ปีบริบูรณ์ (หรือศาลอนุญาตเมื่อมีเหตุอันสมควร) <span class="law">ม.20, ม.1448</span></li>
+          </ul>
+          <p>ผู้เยาว์จะทำนิติกรรมต้องได้รับความยินยอมจาก <b>ผู้แทนโดยชอบธรรม</b> (บิดามารดา หรือผู้ปกครอง) ถ้าไม่ได้รับความยินยอม นิติกรรมนั้นเป็น <b>โมฆียะ</b> <span class="law">ม.21</span></p>
+          <h3>นิติกรรมที่ผู้เยาว์ทำได้เองโดยลำพัง</h3>
+          <div class="grid2">
+            <div class="box"><b>ได้สิทธิ หรือหลุดพ้นหน้าที่</b>เช่น รับของที่มีผู้ให้โดยไม่มีเงื่อนไข <span class="law">ม.22</span></div>
+            <div class="box"><b>ต้องทำเองเฉพาะตัว</b>เช่น การรับรองบุตร <span class="law">ม.23</span></div>
+            <div class="box"><b>จำเป็นในการเลี้ยงชีพ</b>เช่น ซื้ออาหาร ซื้อเครื่องเขียน <span class="law">ม.24</span></div>
+            <div class="box"><b>ทำพินัยกรรม</b>เมื่ออายุ 15 ปีบริบูรณ์ <span class="law">ม.25</span></div>
+          </div>
+          <h3>คนไร้ความสามารถ และคนเสมือนไร้ความสามารถ</h3>
+          <table class="mini-table">
+            <tr><th></th><th>คนไร้ความสามารถ</th><th>คนเสมือนไร้ความสามารถ</th></tr>
+            <tr><td><b>ลักษณะ</b></td><td>คนวิกลจริตที่ศาลสั่งให้เป็นคนไร้ความสามารถ</td><td>กายพิการ จิตฟั่นเฟือน สุรุ่ยสุร่าย ติดสุรายาเมา ฯลฯ จนจัดการงานของตนไม่ได้ และศาลสั่ง</td></tr>
+            <tr><td><b>ผู้ดูแล</b></td><td>ผู้อนุบาล</td><td>ผู้พิทักษ์</td></tr>
+            <tr><td><b>นิติกรรม</b></td><td>ทำเองเป็นโมฆียะ (แม้ได้รับความยินยอม)</td><td>ทำเองได้ ยกเว้นนิติกรรมสำคัญที่กฎหมายกำหนดให้ต้องได้รับความยินยอม</td></tr>
+          </table>
+        </article>
+
+        <article class="topic reveal" id="c3">
+          <div class="topic-head"><div class="n">3</div><h2>นิติกรรม<small>การกระทำโดยใจสมัครเพื่อก่อผลทางกฎหมาย</small></h2></div>
+          <p>นิติกรรม คือการกระทำที่ชอบด้วยกฎหมายและทำด้วยใจสมัคร เพื่อก่อ เปลี่ยนแปลง โอน สงวน หรือระงับสิทธิ เช่น การทำสัญญา การทำพินัยกรรม</p>
+          <div class="grid2">
+            <div class="box rose"><b>โมฆะ = เสียเปล่า</b>ไม่มีผลตั้งแต่ต้น ให้สัตยาบันไม่ได้ เช่น วัตถุประสงค์ผิดกฎหมาย หรือไม่ทำตามแบบที่กฎหมายกำหนด</div>
+            <div class="box"><b>โมฆียะ = อาจถูกบอกล้าง</b>มีผลไปก่อนจนกว่าจะถูกบอกล้าง และให้สัตยาบันได้ เช่น ผู้เยาว์ทำโดยไม่ได้รับความยินยอม หรือทำเพราะถูกหลอก ถูกข่มขู่</div>
+          </div>
+          <div class="example"><b>ตัวอย่าง:</b> นักเรียนอายุ 16 ปีซื้อโทรศัพท์ราคา 30,000 บาท โดยผู้ปกครองไม่ยินยอม สัญญานี้เป็นโมฆียะ ผู้ปกครองบอกล้างได้ (คืนสินค้า รับเงินคืน) หรือจะให้สัตยาบันให้สมบูรณ์ก็ได้</div>
+        </article>
+
+        <article class="topic reveal" id="c4">
+          <div class="topic-head"><div class="n">4</div><h2>สัญญาในชีวิตประจำวัน<small>เกิดเมื่อคำเสนอตรงกับคำสนอง</small></h2></div>
+          <table class="mini-table">
+            <tr><th>สัญญา</th><th>สาระสำคัญ</th></tr>
+            <tr><td><b>ซื้อขาย</b></td><td>ผู้ขายโอนกรรมสิทธิ์ ผู้ซื้อชำระราคา · ซื้อขายที่ดิน บ้าน (อสังหาริมทรัพย์) ต้องทำเป็นหนังสือและจดทะเบียนต่อพนักงานเจ้าหน้าที่ มิฉะนั้นเป็นโมฆะ</td></tr>
+            <tr><td><b>ขายฝาก</b></td><td>ขายไปแล้ว ผู้ขายไถ่คืนได้ภายในกำหนด (อสังหาฯ ไม่เกิน 10 ปี สังหาฯ ไม่เกิน 3 ปี)</td></tr>
+            <tr><td><b>เช่าทรัพย์</b></td><td>ได้ใช้ทรัพย์ชั่วระยะเวลาโดยจ่ายค่าเช่า · เช่าอสังหาฯ เกิน 3 ปี ต้องทำเป็นหนังสือและจดทะเบียน จึงบังคับได้เต็มระยะเวลา</td></tr>
+            <tr><td><b>เช่าซื้อ</b></td><td>ผ่อนชำระครบแล้วกรรมสิทธิ์จึงโอน · ต้องทำเป็นหนังสือ มิฉะนั้นเป็นโมฆะ</td></tr>
+            <tr><td><b>กู้ยืมเงิน</b></td><td>กู้เกิน 2,000 บาท ต้องมีหลักฐานเป็นหนังสือลงลายมือชื่อผู้ยืม จึงฟ้องร้องได้ · ดอกเบี้ยระหว่างบุคคลทั่วไปไม่เกิน <b>ร้อยละ 15 ต่อปี</b></td></tr>
+            <tr><td><b>ค้ำประกัน / จำนอง / จำนำ</b></td><td>ค้ำประกัน = ใช้ตัวบุคคลรับผิดแทน · จำนอง = ใช้ทรัพย์เป็นประกันโดยไม่ส่งมอบ · จำนำ = ส่งมอบสังหาริมทรัพย์ให้เจ้าหนี้ยึดไว้</td></tr>
+          </table>
+          <div class="note"><b>จำให้แม่น:</b> เช่าซื้อไม่ทำเป็นหนังสือ = <b>โมฆะ</b> แต่กู้ยืมเกิน 2,000 บาทไม่มีหลักฐาน = สัญญายังใช้ได้ <b>แต่ฟ้องร้องไม่ได้</b></div>
+        </article>
+
+        <article class="topic reveal" id="c5">
+          <div class="topic-head"><div class="n">5</div><h2>ครอบครัวและมรดก<small>การสมรส ทรัพย์สิน และทายาท</small></h2></div>
+          <h3>เงื่อนไขการสมรส</h3>
+          <ul>
+            <li>ทั้งสองฝ่ายอายุ 18 ปีบริบูรณ์ (กฎหมายแก้ไขปี 2567 มีผลมกราคม 2568 รับรองการสมรสของบุคคลทุกเพศ)</li>
+            <li>ไม่เป็นคนวิกลจริต หรือคนที่ศาลสั่งให้เป็นคนไร้ความสามารถ</li>
+            <li>ไม่เป็นญาติสืบสายโลหิตโดยตรง หรือพี่น้องร่วมบิดามารดา หรือร่วมแต่บิดาหรือมารดา</li>
+            <li>ไม่มีคู่สมรสอยู่แล้ว และต้อง <b>จดทะเบียนสมรส</b></li>
+          </ul>
+          <div class="grid2">
+            <div class="box"><b>สินส่วนตัว</b>ทรัพย์ที่มีก่อนสมรส ของใช้ส่วนตัว เครื่องมือประกอบอาชีพ มรดกหรือของที่มีผู้ให้ระหว่างสมรส</div>
+            <div class="box warm"><b>สินสมรส</b>ทรัพย์ที่ได้มาระหว่างสมรส เช่น เงินเดือน รวมถึงดอกผลของสินส่วนตัว</div>
+          </div>
+          <h3>ทายาทโดยธรรม 6 ลำดับ</h3>
+          <div class="steps">
+            <div class="hot"><b>1</b>ผู้สืบสันดาน</div>
+            <div><b>2</b>บิดามารดา</div>
+            <div><b>3</b>พี่น้องร่วมบิดามารดา</div>
+            <div><b>4</b>พี่น้องร่วมบิดาหรือมารดา</div>
+            <div><b>5</b>ปู่ ย่า ตา ยาย</div>
+            <div><b>6</b>ลุง ป้า น้า อา</div>
+          </div>
+          <p>คู่สมรสที่ชอบด้วยกฎหมายเป็นทายาทโดยธรรมด้วย ถ้าไม่มีทายาทและไม่มีพินัยกรรม มรดกตกทอดแก่แผ่นดิน และเจ้ามรดกจะ <b>ทำพินัยกรรม</b> ยกทรัพย์ให้ผู้ใดก็ได้</p>
+        </article>
+
+        <article class="topic reveal" id="c6">
+          <div class="topic-head"><div class="n">6</div><h2>ละเมิด<small>ทำให้ผู้อื่นเสียหายต้องชดใช้</small></h2></div>
+          <p>ผู้ใดจงใจหรือประมาทเลินเล่อ ทำต่อบุคคลอื่นโดยผิดกฎหมายให้เขาเสียหายแก่ชีวิต ร่างกาย อนามัย เสรีภาพ ทรัพย์สิน หรือสิทธิอย่างใดอย่างหนึ่ง ถือว่าทำละเมิด ต้องใช้ <b>ค่าสินไหมทดแทน</b> <span class="law">ม.420</span></p>
+          <div class="example"><b>ตัวอย่าง:</b> นักเรียนเตะฟุตบอลพลาดโดนกระจกบ้านข้าง ๆ แตกเพราะประมาท ต้องชดใช้ค่ากระจก ซึ่งเป็นความรับผิดทางแพ่ง ไม่ใช่โทษอาญา และบิดามารดาอาจต้องร่วมรับผิดด้วย</div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CRIMINAL ================= -->
+<div class="page crim" id="page-criminal">
+  <section class="page-banner">
+    <div class="container">
+      <div class="crumb">หน้าแรก / <b>กฎหมายอาญา</b></div>
+      <h1>กฎหมายอาญา</h1>
+      <p>บัญญัติว่าการกระทำใดเป็นความผิดและกำหนดโทษไว้ ตามประมวลกฎหมายอาญา (ป.อ.)</p>
+    </div>
+  </section>
+  <section class="block bg-gray">
+    <div class="container lesson">
+      <aside class="toc">
+        <h4>หัวข้อบทเรียน</h4>
+        <a href="#k1"><span>1</span>ลักษณะของกฎหมายอาญา</a>
+        <a href="#k2"><span>2</span>เจตนาและขั้นตอน</a>
+        <a href="#k3"><span>3</span>โทษทางอาญา</a>
+        <a href="#k4"><span>4</span>เด็กกับกฎหมายอาญา</a>
+        <a href="#k5"><span>5</span>ความผิดเกี่ยวกับทรัพย์</a>
+        <a href="#k6"><span>6</span>ยกเว้นความผิด/โทษ</a>
+        <button class="btn btn-primary" data-go="quiz" data-part="2">ทำข้อสอบกฎหมายอาญา</button>
+      </aside>
+      <div>
+        <article class="topic reveal" id="k1">
+          <div class="topic-head"><div class="n">1</div><h2>ลักษณะของกฎหมายอาญา<small>หลักสำคัญที่ต้องรู้</small></h2></div>
+          <ul>
+            <li><b>ไม่มีกฎหมาย ไม่มีความผิด ไม่มีโทษ</b> จะรับโทษต่อเมื่อกฎหมายที่ใช้ในขณะกระทำบัญญัติว่าเป็นความผิดและกำหนดโทษไว้ <span class="law">ม.2</span></li>
+            <li><b>ตีความโดยเคร่งครัด</b> จะใช้บทกฎหมายใกล้เคียงมาลงโทษไม่ได้</li>
+            <li><b>ไม่ย้อนหลังเป็นผลร้าย</b> แต่ถ้ากฎหมายใหม่เป็นคุณ ให้ใช้กฎหมายที่เป็นคุณแก่ผู้กระทำ <span class="law">ม.3</span></li>
+            <li>รัฐเป็นผู้ดำเนินคดีแทนสังคม เพราะการกระทำผิดกระทบความสงบเรียบร้อย</li>
+          </ul>
+          <div class="grid2">
+            <div class="box rose"><b>ความผิดต่อแผ่นดิน (ยอมความไม่ได้)</b>เช่น ลักทรัพย์ ชิงทรัพย์ ฆ่าผู้อื่น แม้ผู้เสียหายไม่เอาเรื่อง รัฐก็ดำเนินคดีต่อได้</div>
+            <div class="box"><b>ความผิดอันยอมความได้</b>เช่น หมิ่นประมาท ฉ้อโกง ยักยอก ต้องร้องทุกข์ภายใน <b>3 เดือน</b> นับแต่รู้เรื่องความผิดและรู้ตัวผู้กระทำ <span class="law">ม.96</span></div>
+          </div>
+        </article>
+
+        <article class="topic reveal" id="k2">
+          <div class="topic-head"><div class="n">2</div><h2>เจตนาและขั้นตอนการกระทำผิด<small>รับผิดเมื่อไร</small></h2></div>
+          <p>บุคคลต้องรับผิดทางอาญาเมื่อกระทำโดย <b>เจตนา</b> เว้นแต่กฎหมายบัญญัติให้รับผิดเมื่อกระทำโดย <b>ประมาท</b> <span class="law">ม.59</span></p>
+          <div class="grid3">
+            <div class="box"><b>เจตนา</b>กระทำโดยรู้สำนึก ประสงค์ต่อผล หรือเล็งเห็นผล</div>
+            <div class="box warm"><b>ประมาท</b>ไม่ใช้ความระมัดระวังเท่าที่ควร เช่น ขับรถเร็วจนชนคน</div>
+            <div class="box rose"><b>ไม่เจตนา</b>ตั้งใจเพียงทำร้าย แต่เกิดผลร้ายแรงเกินกว่าที่ตั้งใจ</div>
+          </div>
+          <h3>ขั้นตอนการกระทำความผิด</h3>
+          <div class="steps">
+            <div><b>1</b>คิด</div>
+            <div><b>2</b>ตกลงใจ</div>
+            <div><b>3</b>ตระเตรียม</div>
+            <div class="hot"><b>4</b>ลงมือ</div>
+            <div class="hot"><b>5</b>สำเร็จ</div>
+          </div>
+          <p>โดยทั่วไปกฎหมายเริ่มลงโทษเมื่อ <b>ลงมือกระทำ</b> ถ้าลงมือแล้วไม่สำเร็จ เรียกว่า <b>พยายามกระทำความผิด</b> รับโทษ 2 ใน 3 ของโทษที่กฎหมายกำหนด <span class="law">ม.80</span> บางความผิดร้ายแรงลงโทษตั้งแต่ขั้นตระเตรียม</p>
+          <h3>ผู้ร่วมกระทำความผิด</h3>
+          <div class="grid3">
+            <div class="box"><b>ตัวการ</b>ร่วมกันกระทำผิดตั้งแต่ 2 คนขึ้นไป รับโทษเต็ม <span class="law">ม.83</span></div>
+            <div class="box"><b>ผู้ใช้</b>ก่อให้ผู้อื่นกระทำผิด ถ้ามีการกระทำผิด รับโทษเสมือนตัวการ <span class="law">ม.84</span></div>
+            <div class="box"><b>ผู้สนับสนุน</b>ช่วยเหลือหรือให้ความสะดวก รับโทษ 2 ใน 3 <span class="law">ม.86</span></div>
+          </div>
+        </article>
+
+        <article class="topic reveal" id="k3">
+          <div class="topic-head"><div class="n">3</div><h2>โทษทางอาญา 5 สถาน <span class="law">ม.18</span><small>เรียงจากหนักไปเบา</small></h2></div>
+          <div class="steps">
+            <div class="hot"><b>1</b>ประหารชีวิต</div>
+            <div><b>2</b>จำคุก</div>
+            <div><b>3</b>กักขัง</div>
+            <div><b>4</b>ปรับ</div>
+            <div><b>5</b>ริบทรัพย์สิน</div>
+          </div>
+          <div class="grid2">
+            <div class="box"><b>จำคุก กับ กักขัง</b>จำคุกอยู่ในเรือนจำ ส่วนกักขังอยู่ในสถานที่กักขังซึ่งไม่ใช่เรือนจำ เป็นโทษที่เบากว่า</div>
+            <div class="box warm"><b>ไม่ชำระค่าปรับ</b>อาจถูกยึดทรัพย์สินมาใช้ค่าปรับ หรือถูกกักขังแทนค่าปรับ</div>
+          </div>
+          <div class="note"><b>จำไว้:</b> ผู้ที่อายุต่ำกว่า 18 ปีในขณะกระทำผิด จะไม่ถูกลงโทษประหารชีวิตหรือจำคุกตลอดชีวิต</div>
+        </article>
+
+        <article class="topic reveal" id="k4">
+          <div class="topic-head"><div class="n">4</div><h2>เด็กกับความรับผิดทางอาญา<small>ใช้อายุในขณะกระทำความผิด</small></h2></div>
+          <table class="mini-table">
+            <tr><th>อายุขณะกระทำผิด</th><th>ผลทางกฎหมาย</th></tr>
+            <tr><td><b>ไม่เกิน 12 ปี</b></td><td>ไม่ต้องรับโทษ (แก้ไขปี 2565 จากเดิม 10 ปี) ส่งให้หน่วยงานคุ้มครองเด็กดูแล <span class="law">ม.73</span></td></tr>
+            <tr><td><b>เกิน 12 ปี แต่ไม่เกิน 15 ปี</b></td><td>ไม่ต้องรับโทษ แต่ศาลอาจว่ากล่าวตักเตือน วางข้อกำหนดให้ผู้ปกครอง หรือส่งไปสถานฝึกอบรม <span class="law">ม.74</span></td></tr>
+            <tr><td><b>เกิน 15 ปี แต่ต่ำกว่า 18 ปี</b></td><td>ศาลพิจารณาว่าควรลงโทษหรือไม่ ถ้าลงโทษ ลดมาตราส่วนโทษลงกึ่งหนึ่ง <span class="law">ม.75</span></td></tr>
+            <tr><td><b>18 ปี แต่ต่ำกว่า 20 ปี</b></td><td>ศาลอาจลดมาตราส่วนโทษลง 1 ใน 3 หรือกึ่งหนึ่ง <span class="law">ม.76</span></td></tr>
+          </table>
+          <div class="note"><b>หมายเหตุ:</b> “ไม่ต้องรับโทษ” ไม่ได้แปลว่า “ไม่มีความผิด” การกระทำยังเป็นความผิด และยังต้องรับผิดทางแพ่ง เช่น ชดใช้ค่าเสียหาย</div>
+        </article>
+
+        <article class="topic reveal" id="k5">
+          <div class="topic-head"><div class="n">5</div><h2>ความผิดเกี่ยวกับทรัพย์<small>ความผิดที่พบบ่อย</small></h2></div>
+          <table class="mini-table">
+            <tr><th>ความผิด</th><th>ลักษณะการกระทำ</th></tr>
+            <tr><td><b>ลักทรัพย์</b> <span class="law">ม.334</span></td><td>เอาทรัพย์ของผู้อื่นไปโดยทุจริต</td></tr>
+            <tr><td><b>วิ่งราวทรัพย์</b> <span class="law">ม.336</span></td><td>ลักทรัพย์โดยฉกฉวยเอาซึ่งหน้า เช่น กระชากกระเป๋าแล้ววิ่งหนี</td></tr>
+            <tr><td><b>ชิงทรัพย์</b> <span class="law">ม.339</span></td><td>ลักทรัพย์โดยใช้กำลังประทุษร้าย หรือขู่เข็ญว่าจะใช้กำลังทันที</td></tr>
+            <tr><td><b>ปล้นทรัพย์</b> <span class="law">ม.340</span></td><td>ร่วมกันชิงทรัพย์ตั้งแต่ 3 คนขึ้นไป</td></tr>
+            <tr><td><b>ฉ้อโกง</b> <span class="law">ม.341</span></td><td>หลอกลวงด้วยข้อความเท็จจนได้ทรัพย์ไป เช่น หลอกขายของออนไลน์</td></tr>
+            <tr><td><b>ยักยอก</b> <span class="law">ม.352</span></td><td>ครอบครองทรัพย์ของผู้อื่นอยู่แล้ว (เช่น เพื่อนฝากไว้) แล้วเอาเป็นของตน</td></tr>
+            <tr><td><b>รับของโจร</b> <span class="law">ม.357</span></td><td>ซื้อ รับไว้ หรือช่วยจำหน่ายของที่รู้ว่าได้มาจากการกระทำผิด</td></tr>
+            <tr><td><b>กรรโชก / รีดเอาทรัพย์</b></td><td>ขู่เข็ญให้ยอมให้ทรัพย์ / ขู่ว่าจะเปิดเผยความลับ</td></tr>
+          </table>
+          <div class="example"><b>แยกให้ออก:</b> กระชากสร้อยแล้ววิ่งหนี = วิ่งราว · ชักมีดขู่ให้ส่งสร้อย = ชิงทรัพย์ · สามคนร่วมกันชักมีดขู่ = ปล้นทรัพย์</div>
+        </article>
+
+        <article class="topic reveal" id="k6">
+          <div class="topic-head"><div class="n">6</div><h2>เหตุยกเว้นความผิดและยกเว้นโทษ<small>เมื่อไรไม่ผิด หรือผิดแต่ไม่ต้องรับโทษ</small></h2></div>
+          <div class="grid2">
+            <div class="box"><b>ป้องกันโดยชอบด้วยกฎหมาย: ไม่มีความผิด</b>ป้องกันสิทธิของตนหรือผู้อื่นจากภยันตรายที่ละเมิดกฎหมายและใกล้จะถึง ถ้าทำพอสมควรแก่เหตุ <span class="law">ม.68</span></div>
+            <div class="box warm"><b>กระทำด้วยความจำเป็น: ผิด แต่ไม่ต้องรับโทษ</b>เช่น ถูกบังคับจนหลีกเลี่ยงไม่ได้ หรือเพื่อให้พ้นภยันตรายที่ตนไม่ได้ก่อ ถ้าไม่เกินสมควรแก่เหตุ <span class="law">ม.67</span></div>
+          </div>
+          <p>กรณีอื่น เช่น คนวิกลจริตที่ไม่สามารถรู้ผิดชอบ ไม่ต้องรับโทษ <span class="law">ม.65</span> และคู่สมรสที่กระทำผิดเกี่ยวกับทรัพย์บางฐานต่อกัน ไม่ต้องรับโทษ <span class="law">ม.71</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= QUIZ ================= -->
+<div class="page" id="page-quiz">
+  <section class="page-banner">
+    <div class="container">
+      <div class="crumb">หน้าแรก / <b>แบบทดสอบ</b></div>
+      <h1>แบบทดสอบ 40 ข้อ</h1>
+      <p>4 ตอน ตอนละ 10 ข้อ เลือกคำตอบให้ครบแล้วกดส่ง ระบบจะตรวจและเฉลยพร้อมเหตุผล</p>
+    </div>
+  </section>
+  <section class="block bg-gray quiz-sec">
+    <div class="quiz-wrap container">
+      <div class="stepper" id="stepper"></div>
+      <div class="result-box" id="resultBox" hidden></div>
+      <div class="part-head" id="partHead"></div>
+      <div id="qlist"></div>
+      <div class="quiz-foot">
+        <button class="btn btn-outline" id="prevBtn">← ตอนก่อนหน้า</button>
+        <span class="answered" id="answered"></span>
+        <button class="btn btn-dark" id="nextBtn">ตอนถัดไป →</button>
+        <button class="btn btn-primary" id="submitBtn" hidden>ส่งคำตอบ</button>
+      </div>
+      <p class="warn" id="warn" hidden></p>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="page" id="page-about">
+  <section class="page-banner">
+    <div class="container">
+      <div class="crumb">หน้าแรก / <b>เกี่ยวกับผู้สอน</b></div>
+      <h1>เกี่ยวกับผู้สอน</h1>
+      <p>กลุ่มสาระการเรียนรู้สังคมศึกษา ศาสนา และวัฒนธรรม</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="container profile">
+      <div class="photo reveal">
+        <img src="images/profile.jpg" alt="นางสาวเกณิกา สาระดา">
+        <div class="cap"><b>นางสาวเกณิกา สาระดา</b><span>โรงเรียนสนามชัยเขต จ.ฉะเชิงเทรา</span></div>
+      </div>
+      <div class="reveal d1">
+        <span class="sub-title">ครูผู้สอน</span>
+        <h2>นางสาวเกณิกา สาระดา</h2>
+        <span class="role">ครู กลุ่มสาระการเรียนรู้สังคมศึกษา ศาสนา และวัฒนธรรม</span>
+        <h3 style="font-size:20px;margin-bottom:16px">ประวัติการศึกษา</h3>
+        <div class="timeline">
+          <div class="tl reveal"><small>ก่อนอุดมศึกษา</small><b>โรงเรียนพยัคฆภูมิวิทยาคาร</b></div>
+          <div class="tl reveal"><small>อุดมศึกษา</small><b>ครุศาสตรบัณฑิต สาขาวิชาสังคมศึกษา</b><span>มหาวิทยาลัยราชภัฏมหาสารคาม</span></div>
+          <div class="tl reveal"><small>บรรจุแต่งตั้ง · พ.ศ. 2567</small><b>โรงเรียนสนามชัยเขต</b><span>จังหวัดฉะเชิงเทรา</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block bg-gray gallery-sec">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sub-title">ภาพกิจกรรม</span>
+        <h2>บรรยากาศการสอนและกิจกรรม</h2>
+        <p>การเรียนการสอน กิจกรรมลูกเสือ และงานต่าง ๆ ของโรงเรียนสนามชัยเขต</p>
+      </div>
+    </div>
+    <div class="marquee" id="marquee"><div class="track"></div><div class="track rev"></div></div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="logo"><span>เรียนสังคมกับ<b>คุณครูเกณิกา</b></span></div>
+      <div class="foot-links">
+        <button data-go="home">หน้าแรก</button>
+        <button data-go="civil">กฎหมายแพ่ง</button>
+        <button data-go="criminal">กฎหมายอาญา</button>
+        <button data-go="quiz">แบบทดสอบ</button>
+        <button data-go="about">เกี่ยวกับผู้สอน</button>
+      </div>
+    </div>
+    <p class="copy">จัดทำโดย นางสาวเกณิกา สาระดา · โรงเรียนสนามชัยเขต จังหวัดฉะเชิงเทรา · เนื้อหาเพื่อการศึกษา</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Navigation ---------- */
+const pages=document.querySelectorAll('.page');
+const menu=document.getElementById('menu');
+function go(id){
+  pages.forEach(p=>p.classList.toggle('show',p.id==='page-'+id));
+  menu.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.go===id));
+  menu.classList.remove('open');
+  window.scrollTo(0,0);
+  observe();
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-go]');
+  if(b){go(b.dataset.go);if(b.dataset.part)showPart(+b.dataset.part);return;}
+  const a=e.target.closest('.toc a');
+  if(a){e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});}
+});
+document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+
+/* ---------- Scroll reveal + counters ---------- */
+let io;
+function observe(){
+  const els=document.querySelectorAll('.page.show .reveal:not(.in)');
+  if(!('IntersectionObserver' in window)){els.forEach(el=>{el.classList.add('in');el.querySelectorAll('[data-count]').forEach(count);});return;}
+  io=io||new IntersectionObserver(es=>es.forEach(en=>{
+    if(!en.isIntersecting)return;
+    en.target.classList.add('in');io.unobserve(en.target);
+    en.target.querySelectorAll('[data-count]').forEach(count);
+  }),{threshold:.12});
+  els.forEach(el=>io.observe(el));
+}
+function count(el){
+  const end=+el.dataset.count;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=end;return;}
+  let t0=null;
+  const step=t=>{t0=t0||t;const p=Math.min((t-t0)/1300,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);};
+  requestAnimationFrame(step);
+}
+observe();
+
+/* ---------- Quiz: 40 ข้อ 4 ตอน ---------- */
+const Q=[
+ /* ตอนที่ 1 แพ่ง: บุคคล ความสามารถ นิติกรรม */
+ {q:'สภาพบุคคลเริ่มต้นเมื่อใด',o:['เมื่อตั้งครรภ์','เมื่อคลอดแล้วอยู่รอดเป็นทารก','เมื่อแจ้งเกิด','เมื่ออายุครบ 7 ปี'],a:1,e:'ม.15 สภาพบุคคลเริ่มเมื่อคลอดแล้วอยู่รอดเป็นทารก และสิ้นสุดเมื่อตาย'},
+ {q:'ข้อใดเป็นนิติบุคคล',o:['นักเรียน','ครูประจำชั้น','มูลนิธิ','ผู้ปกครอง'],a:2,e:'มูลนิธิเป็นนิติบุคคล คือบุคคลที่กฎหมายสมมติขึ้น ส่วนข้ออื่นเป็นบุคคลธรรมดา'},
+ {q:'บุคคลหายไปจากภูมิลำเนาโดยไม่มีใครรู้ว่ายังมีชีวิตอยู่หรือไม่ กรณีปกติต้องนานกี่ปี ศาลจึงสั่งให้เป็นคนสาบสูญได้',o:['1 ปี','2 ปี','5 ปี','10 ปี'],a:2,e:'กรณีปกติ 5 ปี ส่วนกรณีพิเศษ เช่น สงคราม เรืออับปาง ใช้ 2 ปี'},
+ {q:'บุคคลจะบรรลุนิติภาวะเมื่อใด',o:['อายุ 18 ปีบริบูรณ์','อายุ 20 ปีบริบูรณ์ หรือสมรสตามกฎหมาย','อายุ 15 ปีบริบูรณ์','เมื่อมีบัตรประจำตัวประชาชน'],a:1,e:'ม.19 บรรลุนิติภาวะเมื่ออายุ 20 ปีบริบูรณ์ และ ม.20 เมื่อสมรสตามกฎหมาย'},
+ {q:'นิติกรรมที่ผู้เยาว์ทำโดยไม่ได้รับความยินยอมจากผู้แทนโดยชอบธรรม มีผลอย่างไร',o:['สมบูรณ์','โมฆะ','โมฆียะ','ผิดกฎหมายอาญา'],a:2,e:'ม.21 เป็นโมฆียะ คือมีผลไปก่อนจนกว่าจะถูกบอกล้าง'},
+ {q:'ผู้เยาว์ทำพินัยกรรมได้เมื่ออายุเท่าใด',o:['12 ปีบริบูรณ์','15 ปีบริบูรณ์','17 ปีบริบูรณ์','20 ปีบริบูรณ์'],a:1,e:'ม.25 ผู้เยาว์ทำพินัยกรรมได้เมื่ออายุ 15 ปีบริบูรณ์'},
+ {q:'นิติกรรมใดที่ผู้เยาว์ทำได้เองโดยไม่ต้องขอความยินยอม',o:['ซื้อรถจักรยานยนต์','กู้ยืมเงินเพื่อนบ้าน','ซื้ออาหารกลางวันที่โรงเรียน','ขายที่ดินที่ได้รับมรดก'],a:2,e:'ม.24 นิติกรรมที่สมแก่ฐานานุรูปและจำเป็นในการเลี้ยงชีพ ผู้เยาว์ทำเองได้'},
+ {q:'ผู้ที่ศาลตั้งให้ดูแลคนไร้ความสามารถ เรียกว่าอะไร',o:['ผู้พิทักษ์','ผู้อนุบาล','ผู้ปกครอง','ผู้จัดการมรดก'],a:1,e:'คนไร้ความสามารถมี “ผู้อนุบาล” ส่วนคนเสมือนไร้ความสามารถมี “ผู้พิทักษ์”'},
+ {q:'นิติกรรมที่ทำขึ้นเพราะถูกข่มขู่ มีผลอย่างไร',o:['สมบูรณ์','โมฆะ','โมฆียะ','ฟ้องร้องไม่ได้'],a:2,e:'นิติกรรมที่แสดงเจตนาเพราะถูกข่มขู่หรือถูกกลฉ้อฉล เป็นโมฆียะ'},
+ {q:'“โมฆะ” มีความหมายตรงกับข้อใด',o:['มีผลจนกว่าจะถูกบอกล้าง','เสียเปล่า ไม่มีผลมาตั้งแต่ต้น','สมบูรณ์แต่ฟ้องร้องไม่ได้','มีผลเมื่อศาลรับรอง'],a:1,e:'โมฆะคือเสียเปล่า ไม่มีผลทางกฎหมายตั้งแต่ต้น และให้สัตยาบันไม่ได้'},
+ /* ตอนที่ 2 แพ่ง: สัญญา ครอบครัว มรดก ละเมิด */
+ {q:'สัญญาเกิดขึ้นเมื่อใด',o:['เมื่อฝ่ายหนึ่งเสนอ','เมื่อคำเสนอและคำสนองถูกต้องตรงกัน','เมื่อจ่ายเงินครบ','เมื่อมีพยานสองคน'],a:1,e:'สัญญาเกิดเมื่อคำเสนอของฝ่ายหนึ่งตรงกับคำสนองของอีกฝ่าย'},
+ {q:'ซื้อขายที่ดินโดยไม่ทำเป็นหนังสือและไม่จดทะเบียนต่อพนักงานเจ้าหน้าที่ มีผลอย่างไร',o:['โมฆะ','โมฆียะ','สมบูรณ์ แต่ฟ้องร้องไม่ได้','สมบูรณ์ทุกประการ'],a:0,e:'ม.456 ซื้อขายอสังหาริมทรัพย์ต้องทำเป็นหนังสือและจดทะเบียน มิฉะนั้นเป็นโมฆะ'},
+ {q:'ขายฝากที่ดิน ผู้ขายต้องไถ่คืนภายในกี่ปี',o:['ไม่เกิน 1 ปี','ไม่เกิน 3 ปี','ไม่เกิน 5 ปี','ไม่เกิน 10 ปี'],a:3,e:'ขายฝากอสังหาริมทรัพย์ไถ่ได้ไม่เกิน 10 ปี ส่วนสังหาริมทรัพย์ไม่เกิน 3 ปี'},
+ {q:'สัญญาเช่าซื้อที่ไม่ได้ทำเป็นหนังสือ มีผลอย่างไร',o:['สมบูรณ์','โมฆียะ','โมฆะ','ฟ้องร้องได้เฉพาะผู้เช่าซื้อ'],a:2,e:'ม.572 สัญญาเช่าซื้อต้องทำเป็นหนังสือ มิฉะนั้นเป็นโมฆะ'},
+ {q:'กู้ยืมเงินเกินกี่บาท ต้องมีหลักฐานเป็นหนังสือลงลายมือชื่อผู้ยืม จึงฟ้องร้องได้',o:['500 บาท','1,000 บาท','2,000 บาท','5,000 บาท'],a:2,e:'ม.653 กู้ยืมเกิน 2,000 บาท ต้องมีหลักฐานเป็นหนังสือลงลายมือชื่อผู้ยืม'},
+ {q:'ดอกเบี้ยเงินกู้ระหว่างบุคคลทั่วไป คิดได้ไม่เกินเท่าใด',o:['ร้อยละ 7.5 ต่อปี','ร้อยละ 10 ต่อปี','ร้อยละ 15 ต่อปี','ร้อยละ 28 ต่อปี'],a:2,e:'ม.654 ห้ามคิดดอกเบี้ยเกินร้อยละ 15 ต่อปี'},
+ {q:'การสมรสจะสมบูรณ์ตามกฎหมายเมื่อใด',o:['เมื่อจัดงานแต่งงาน','เมื่ออยู่กินด้วยกัน','เมื่อจดทะเบียนสมรส','เมื่อมอบสินสอด'],a:2,e:'การสมรสสมบูรณ์ตามกฎหมายเมื่อจดทะเบียนสมรส'},
+ {q:'ทรัพย์สินใดเป็น “สินสมรส”',o:['บ้านที่ซื้อไว้ก่อนแต่งงาน','เงินเดือนที่ได้รับระหว่างสมรส','สร้อยคอที่ใช้ส่วนตัว','ที่ดินที่ได้รับมรดกระหว่างสมรส'],a:1,e:'ทรัพย์ที่ได้มาระหว่างสมรส เช่น เงินเดือน เป็นสินสมรส ส่วนของที่มีก่อนสมรส ของใช้ส่วนตัว และมรดก เป็นสินส่วนตัว'},
+ {q:'ผู้ตายไม่มีทายาทเลยและไม่ได้ทำพินัยกรรม มรดกจะตกเป็นของใคร',o:['เพื่อนสนิท','วัดใกล้บ้าน','แผ่นดิน','ผู้ใหญ่บ้าน'],a:2,e:'เมื่อไม่มีทายาทและไม่มีพินัยกรรม มรดกตกทอดแก่แผ่นดิน'},
+ {q:'นักเรียนเตะฟุตบอลโดนกระจกบ้านผู้อื่นแตกเพราะประมาท ต้องรับผิดอย่างไร',o:['รับโทษจำคุก','ชดใช้ค่าสินไหมทดแทนฐานละเมิด','ไม่ต้องรับผิดเพราะเป็นเด็ก','ถูกปรับตามกฎหมายอาญา'],a:1,e:'ม.420 ทำละเมิดโดยจงใจหรือประมาทเลินเล่อ ต้องใช้ค่าสินไหมทดแทน'},
+ /* ตอนที่ 3 อาญา: หลักทั่วไป โทษ เด็ก */
+ {q:'หลัก “ไม่มีกฎหมาย ไม่มีความผิด ไม่มีโทษ” หมายถึงข้อใด',o:['ผู้กระทำผิดทุกคนต้องถูกลงโทษ','ลงโทษได้เมื่อมีกฎหมายบัญญัติว่าการกระทำนั้นเป็นความผิดในขณะกระทำ','ศาลลงโทษตามดุลพินิจได้เสมอ','กฎหมายอาญาใช้ย้อนหลังได้'],a:1,e:'ม.2 ต้องมีกฎหมายที่ใช้ในขณะกระทำบัญญัติเป็นความผิดและกำหนดโทษไว้'},
+ {q:'โทษทางอาญาตามประมวลกฎหมายอาญามีกี่สถาน',o:['3 สถาน','4 สถาน','5 สถาน','6 สถาน'],a:2,e:'ม.18 ประหารชีวิต จำคุก กักขัง ปรับ ริบทรัพย์สิน'},
+ {q:'ข้อใด “ไม่ใช่” โทษทางอาญา',o:['กักขัง','ปรับ','ริบทรัพย์สิน','ชดใช้ค่าสินไหมทดแทน'],a:3,e:'ค่าสินไหมทดแทนเป็นความรับผิดทางแพ่ง'},
+ {q:'โทษกักขังต่างจากโทษจำคุกอย่างไร',o:['กักขังหนักกว่าจำคุก','กักขังอยู่ในสถานที่กักขังซึ่งไม่ใช่เรือนจำ','กักขังใช้กับผู้ใหญ่เท่านั้น','ไม่ต่างกัน'],a:1,e:'กักขังคือการกักตัวในสถานที่กักขังซึ่งไม่ใช่เรือนจำ เป็นโทษที่เบากว่าจำคุก'},
+ {q:'ขับรถเร็วโดยไม่ระมัดระวังจนชนคนบาดเจ็บ เป็นการกระทำลักษณะใด',o:['เจตนา','ประมาท','ไม่เจตนา','ป้องกัน'],a:1,e:'กระทำโดยไม่ใช้ความระมัดระวังเท่าที่ควร ถือเป็นการกระทำโดยประมาท'},
+ {q:'โดยทั่วไป กฎหมายเริ่มลงโทษเมื่อการกระทำความผิดถึงขั้นใด',o:['คิด','ตกลงใจ','ตระเตรียม','ลงมือกระทำ'],a:3,e:'โดยหลักกฎหมายลงโทษเมื่อลงมือกระทำ ยกเว้นบางความผิดร้ายแรงที่ลงโทษตั้งแต่ขั้นตระเตรียม'},
+ {q:'ผู้ที่ลงมือกระทำความผิดแล้วแต่ไม่สำเร็จ (พยายามกระทำความผิด) ต้องรับโทษเท่าใด',o:['เท่ากับความผิดสำเร็จ','กึ่งหนึ่ง','2 ใน 3 ของโทษที่กฎหมายกำหนด','ไม่ต้องรับโทษ'],a:2,e:'ม.80 พยายามกระทำความผิด รับโทษ 2 ใน 3 ของโทษที่กฎหมายกำหนดไว้'},
+ {q:'ผู้สนับสนุนการกระทำความผิด ต้องรับโทษเท่าใด',o:['เท่ากับตัวการ','กึ่งหนึ่ง','2 ใน 3 ของโทษที่กำหนดไว้','ไม่ต้องรับโทษ'],a:2,e:'ม.86 ผู้สนับสนุนรับโทษ 2 ใน 3 ของโทษที่กำหนดไว้สำหรับความผิดนั้น'},
+ {q:'เด็กอายุไม่เกิน 12 ปีกระทำความผิด มีผลอย่างไร',o:['รับโทษกึ่งหนึ่ง','ไม่ต้องรับโทษ','รับโทษเหมือนผู้ใหญ่','ถูกส่งเข้าเรือนจำ'],a:1,e:'ม.73 (แก้ไขปี 2565) เด็กอายุไม่เกิน 12 ปีไม่ต้องรับโทษ'},
+ {q:'ผู้ที่อายุ 16 ปีกระทำความผิด ศาลจะดำเนินการอย่างไร',o:['ไม่ต้องรับโทษทุกกรณี','ลงโทษเต็มเหมือนผู้ใหญ่','พิจารณาว่าควรลงโทษหรือไม่ ถ้าลงโทษ ลดมาตราส่วนโทษกึ่งหนึ่ง','ลงโทษประหารชีวิตได้'],a:2,e:'ม.75 อายุเกิน 15 ปีแต่ต่ำกว่า 18 ปี ศาลพิจารณาความรับผิดชอบ ถ้าลงโทษให้ลดมาตราส่วนโทษลงกึ่งหนึ่ง'},
+ /* ตอนที่ 4 อาญา: ความผิดเกี่ยวกับทรัพย์ เหตุยกเว้น */
+ {q:'คนร้ายกระชากกระเป๋าจากมือแล้ววิ่งหนี โดยไม่ได้ทำร้ายร่างกาย เป็นความผิดฐานใด',o:['ลักทรัพย์ธรรมดา','วิ่งราวทรัพย์','ชิงทรัพย์','ปล้นทรัพย์'],a:1,e:'ม.336 วิ่งราวทรัพย์ คือลักทรัพย์โดยฉกฉวยเอาซึ่งหน้า'},
+ {q:'คนร้ายชักมีดขู่ให้ส่งสร้อยคอให้ทันที เป็นความผิดฐานใด',o:['วิ่งราวทรัพย์','ชิงทรัพย์','ฉ้อโกง','ยักยอก'],a:1,e:'ม.339 ชิงทรัพย์ คือลักทรัพย์โดยใช้กำลังประทุษร้ายหรือขู่เข็ญว่าจะใช้กำลังทันที'},
+ {q:'ร่วมกันชิงทรัพย์ตั้งแต่ 3 คนขึ้นไป เป็นความผิดฐานใด',o:['กรรโชกทรัพย์','วิ่งราวทรัพย์','ปล้นทรัพย์','รีดเอาทรัพย์'],a:2,e:'ม.340 ร่วมกันชิงทรัพย์ตั้งแต่ 3 คนขึ้นไป เป็นปล้นทรัพย์'},
+ {q:'เพื่อนฝากโทรศัพท์ไว้ แล้วผู้รับฝากเอาไปขายเป็นของตน เป็นความผิดฐานใด',o:['ลักทรัพย์','ยักยอก','ฉ้อโกง','รับของโจร'],a:1,e:'ม.352 ยักยอก คือครอบครองทรัพย์ของผู้อื่นอยู่แล้วเบียดบังเป็นของตน'},
+ {q:'ร้านค้าออนไลน์หลอกให้โอนเงินโดยไม่มีสินค้าจริง เป็นความผิดฐานใด',o:['ยักยอก','ฉ้อโกง','ลักทรัพย์','กรรโชก'],a:1,e:'ม.341 ฉ้อโกง คือหลอกลวงด้วยข้อความเท็จจนได้ทรัพย์ไป'},
+ {q:'รับซื้อโทรศัพท์ราคาถูกผิดปกติ โดยรู้อยู่ว่าเป็นของที่ขโมยมา เป็นความผิดฐานใด',o:['ลักทรัพย์','ฉ้อโกง','รับของโจร','ไม่มีความผิด'],a:2,e:'ม.357 รับของโจร คือซื้อ รับไว้ หรือช่วยจำหน่ายทรัพย์ที่รู้ว่าได้มาจากการกระทำความผิด'},
+ {q:'ข้อใดเป็นความผิดอันยอมความได้',o:['ลักทรัพย์','ชิงทรัพย์','ฉ้อโกง','ฆ่าผู้อื่น'],a:2,e:'ฉ้อโกง (ม.341) ยอมความได้ ส่วนข้ออื่นเป็นความผิดต่อแผ่นดิน'},
+ {q:'ความผิดอันยอมความได้ ต้องร้องทุกข์ภายในกี่เดือนนับแต่รู้เรื่องและรู้ตัวผู้กระทำ',o:['1 เดือน','3 เดือน','6 เดือน','1 ปี'],a:1,e:'ม.96 ต้องร้องทุกข์ภายใน 3 เดือน มิฉะนั้นขาดอายุความ'},
+ {q:'ป้องกันตนเองจากภยันตรายที่ใกล้จะถึง โดยทำพอสมควรแก่เหตุ มีผลอย่างไร',o:['ผิดแต่ไม่ต้องรับโทษ','ไม่มีความผิด','ผิดและได้ลดโทษ','ผิดเต็มที่'],a:1,e:'ม.68 ป้องกันโดยชอบด้วยกฎหมาย ไม่มีความผิด'},
+ {q:'ผู้ที่ถูกบังคับจนไม่อาจหลีกเลี่ยงได้ให้กระทำความผิด โดยทำไม่เกินสมควรแก่เหตุ มีผลอย่างไร',o:['ไม่มีความผิด','มีความผิด แต่ไม่ต้องรับโทษ','รับโทษเต็ม','รับโทษกึ่งหนึ่งเสมอ'],a:1,e:'ม.67 กระทำด้วยความจำเป็น มีความผิด แต่ไม่ต้องรับโทษ'}
+];
+const PARTS=[
+ {t:'ตอนที่ 1',n:'แพ่ง: บุคคลและนิติกรรม'},
+ {t:'ตอนที่ 2',n:'แพ่ง: สัญญา ครอบครัว มรดก'},
+ {t:'ตอนที่ 3',n:'อาญา: หลักทั่วไปและโทษ'},
+ {t:'ตอนที่ 4',n:'อาญา: ความผิดเกี่ยวกับทรัพย์'}
+];
+const L=['ก','ข','ค','ง'],PER=10;
+let ans=Array(Q.length).fill(null),part=0,submitted=false,confirmSkip=false;
+const $=id=>document.getElementById(id);
+
+function partScore(p){let c=0;for(let k=p*PER;k<p*PER+PER;k++)if(ans[k]===Q[k].a)c++;return c;}
+function partDone(p){return ans.slice(p*PER,p*PER+PER).filter(v=>v!==null).length;}
+
+function renderStepper(){
+  $('stepper').innerHTML=PARTS.map((p,k)=>{
+    const d=partDone(k);
+    return `<button class="step ${k===part?'on':''}" data-p="${k}">
+      ${submitted?`<span class="sc">${partScore(k)}/10</span>`:''}
+      <b>${p.t}</b><small>${p.n}</small><i><span style="width:${d*10}%"></span></i></button>`;
+  }).join('');
+  $('stepper').querySelectorAll('.step').forEach(b=>b.onclick=()=>showPart(+b.dataset.p));
+}
+function showPart(p){
+  part=p;
+  const P=PARTS[p];
+  $('partHead').innerHTML=`<small>${P.t} · ข้อ ${p*PER+1}–${p*PER+PER}</small><h2>${P.n}</h2>`;
+  let h='';
+  for(let k=p*PER;k<p*PER+PER;k++){
+    const q=Q[k],a=ans[k];
+    let tag='';
+    if(submitted) tag=a===null?'<span class="tagq skip">ไม่ได้ตอบ</span>':a===q.a?'<span class="tagq ok">ถูก</span>':'<span class="tagq no">ผิด</span>';
+    h+=`<div class="qitem" id="q${k}" style="animation-delay:${(k-p*PER)*.05}s">
+      <div class="qno"><span>ข้อ <b>${k+1}</b></span>${tag}</div>
+      <div class="qtext">${q.q}</div>
+      <div class="opts">${q.o.map((o,j)=>{
+        let c='';
+        if(submitted){if(j===q.a)c='right';else if(j===a)c='wrong';}
+        else if(j===a)c='pick';
+        return `<button class="opt ${c}" data-q="${k}" data-j="${j}" ${submitted?'disabled':''}><span class="k">${L[j]}</span>${o}</button>`;
+      }).join('')}</div>
+      ${submitted?`<div class="explain"><b>เฉลย ${L[q.a]}.</b> ${q.e}</div>`:''}
+    </div>`;
+  }
+  $('qlist').innerHTML=h;
+  $('qlist').querySelectorAll('.opt').forEach(b=>b.onclick=()=>choose(+b.dataset.q,+b.dataset.j));
+  $('prevBtn').style.visibility=p===0?'hidden':'visible';
+  const last=p===PARTS.length-1;
+  $('nextBtn').hidden=last;
+  $('submitBtn').hidden=!last||submitted;
+  $('warn').hidden=true;confirmSkip=false;
+  updateCount();renderStepper();
+  const top=document.querySelector('#page-quiz .quiz-sec');
+  if(window.scrollY>top.offsetTop) window.scrollTo({top:top.offsetTop-70,behavior:'smooth'});
+}
+function choose(k,j){
+  if(submitted)return;
+  ans[k]=j;
+  document.querySelectorAll(`#q${k} .opt`).forEach((b,i)=>b.classList.toggle('pick',i===j));
+  confirmSkip=false;$('warn').hidden=true;
+  updateCount();renderStepper();
+}
+function updateCount(){
+  const n=ans.filter(v=>v!==null).length;
+  $('answered').innerHTML=submitted?`ได้ <b>${ans.filter((v,k)=>v===Q[k].a).length}</b> จาก 40 คะแนน`:`ตอบแล้ว <b>${n}</b> / 40 ข้อ`;
+}
+function submit(){
+  const left=ans.map((v,k)=>v===null?k+1:null).filter(Boolean);
+  if(left.length&&!confirmSkip){
+    confirmSkip=true;
+    $('warn').hidden=false;
+    $('warn').innerHTML=`ยังไม่ได้ตอบ ${left.length} ข้อ (ข้อ ${left.slice(0,8).join(', ')}${left.length>8?' …':''}) กด “ส่งคำตอบ” อีกครั้งเพื่อส่งเลย`;
+    return;
+  }
+  submitted=true;
+  const score=ans.filter((v,k)=>v===Q[k].a).length,pct=Math.round(score/40*100);
+  const msg=pct>=80?'ดีมาก เข้าใจเนื้อหาครบถ้วน':pct>=50?'ผ่านเกณฑ์ ลองทบทวนข้อที่ผิด':'ยังไม่ผ่านเกณฑ์ กลับไปอ่านบทเรียนแล้วลองใหม่';
+  $('resultBox').hidden=false;
+  $('resultBox').innerHTML=`<div class="big">${score}<small> / 40</small></div>
+    <div><h3>${msg}</h3><span>คิดเป็น ${pct}% · กดแต่ละตอนด้านบนเพื่อดูเฉลย</span>
+      <div class="parts">${PARTS.map((p,k)=>`<div>${p.t}<b>${partScore(k)}/10</b></div>`).join('')}</div>
+      <button class="btn btn-primary" id="retry">ทำใหม่อีกครั้ง</button>
+      <button class="btn btn-ghost" data-go="civil">อ่านบทเรียน</button></div>`;
+  $('retry').onclick=reset;
+  showPart(0);
+  window.scrollTo({top:document.querySelector('#page-quiz .quiz-sec').offsetTop-70,behavior:'smooth'});
+}
+function reset(){
+  ans=Array(Q.length).fill(null);submitted=false;
+  $('resultBox').hidden=true;
+  showPart(0);
+}
+$('prevBtn').onclick=()=>showPart(part-1);
+$('nextBtn').onclick=()=>showPart(part+1);
+$('submitBtn').onclick=submit;
+showPart(0);
+
+/* ---------- Gallery marquee ---------- */
+const PHOTOS=["images/gallery/01.jpg", "images/gallery/02.jpg", "images/gallery/03.jpg", "images/gallery/04.jpg", "images/gallery/05.jpg", "images/gallery/06.jpg", "images/gallery/07.jpg", "images/gallery/08.jpg", "images/gallery/09.jpg", "images/gallery/10.jpg", "images/gallery/11.jpg", "images/gallery/12.jpg", "images/gallery/13.jpg", "images/gallery/14.jpg", "images/gallery/15.jpg", "images/gallery/16.jpg", "images/gallery/17.jpg", "images/gallery/18.jpg", "images/gallery/19.jpg", "images/gallery/20.jpg", "images/gallery/21.jpg", "images/gallery/22.jpg", "images/gallery/23.jpg", "images/gallery/24.jpg", "images/gallery/25.jpg", "images/gallery/26.jpg", "images/gallery/27.jpg", "images/gallery/28.jpg", "images/gallery/29.jpg", "images/gallery/30.jpg", "images/gallery/31.jpg", "images/gallery/32.jpg", "images/gallery/33.jpg", "images/gallery/34.jpg", "images/gallery/35.jpg", "images/gallery/36.jpg", "images/gallery/37.jpg", "images/gallery/38.jpg", "images/gallery/39.jpg", "images/gallery/40.jpg", "images/gallery/41.jpg", "images/gallery/42.jpg", "images/gallery/43.jpg", "images/gallery/44.jpg", "images/gallery/45.jpg", "images/gallery/46.jpg", "images/gallery/47.jpg", "images/gallery/48.jpg", "images/gallery/49.jpg", "images/gallery/50.jpg"];
+(function(){
+  const tracks=document.querySelectorAll('#marquee .track');
+  const half=Math.ceil(PHOTOS.length/2);
+  [PHOTOS.slice(0,half),PHOTOS.slice(half)].forEach((set,t)=>{
+    const frag=document.createDocumentFragment();
+    for(let r=0;r<2;r++) set.forEach((src,i)=>{
+      const img=new Image();img.src=src;img.alt='ภาพกิจกรรม '+(t*half+i+1);img.decoding='async';img.loading='lazy';
+      if(r)img.setAttribute('aria-hidden','true');
+      frag.appendChild(img);
+    });
+    tracks[t].appendChild(frag);
+  });
+  document.getElementById('marquee').addEventListener('click',e=>{
+    if(e.target.tagName!=='IMG')return;
+    const box=document.createElement('div');box.className='lightbox';
+    const big=new Image();big.src=e.target.src;big.alt=e.target.alt;box.appendChild(big);
+    box.onclick=()=>box.remove();document.body.appendChild(box);
+  });
+})();
+</script>
+</body>
+</html>
